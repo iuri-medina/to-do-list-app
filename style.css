@@ -1,0 +1,93 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+body {
+    width: 100vw; height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div#container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 100%; width: 600px;
+}
+
+.title {
+    margin-top: 120px;
+}
+
+#input-field {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.to-do-input {
+    height: 40px; width: 350px;
+    padding: 10px 60px 10px 10px;
+    margin-left: 50px;
+    font-size: 1em;
+
+}
+
+.add-task {
+    width: 50px; height: 40px;
+    position: relative; left: -50px;
+    background: #49c539;
+    font-weight: bolder;
+    outline: none; border: none;
+    cursor: pointer;
+}
+
+#task-field {
+    padding: 25px;
+}
+
+ul#task-list {
+    list-style: none;
+    width: 550px;
+}
+
+ul#task-list li {
+    padding: 20px;
+    width: 550px;
+    margin: 10px 0;
+    border-top: 1px solid rgba(128, 128, 128, .5);
+    border-bottom: 1px solid rgba(128, 128, 128, .5);
+    word-break: break-all;
+}
+
+.del-btn {
+    position: relative;
+    padding: 10px;
+    top: -3px; left: 10px;
+    background: transparent;
+    outline: none; border: none;
+    cursor: pointer;
+    background-image: url(./icons/trash-icon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@media (max-width: 430px)  {
+    ul#task-list {
+        width: 350px;
+    }
+
+    ul#task-list li {
+        width: 350px;
+    }
+}

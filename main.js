@@ -23,3 +23,14 @@ addButton.addEventListener("click", () => {
 });
 
 
+const date = new Date;
+
+const today = date.toDateString();
+splitedToday = today.split(" ");
+const dayString = splitedToday[0];
+const month = splitedToday[1];
+const dayNumber = splitedToday[2];
+const year = splitedToday[3];
+
+console.log(dayString, dayNumber, month, year);
+

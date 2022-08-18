@@ -46,7 +46,7 @@ const list = document.querySelector('#task-list');
 
 addButton.addEventListener("click", () => {
     if(input.value === "" || input.value === " ") {
-        alert("Digite algo para adicionar a tarefa.");
+        alert("Type something to add a task.");
     }
     else {
         let task = document.createElement('li');

@@ -11,6 +11,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #e3e6e7;
 }
 
 div#container {
@@ -21,13 +22,13 @@ div#container {
     height: 100%; width: 600px;
 }
 
-.title {
+.date {
     margin-top: 120px;
 }
 
 #input-field {
     margin-top: 30px;
-    margin-bottom: 50px;
+    margin-bottom: 15px;
     padding: 30px;
     display: flex;
     justify-content: center;
@@ -37,19 +38,28 @@ div#container {
 
 .to-do-input {
     height: 40px; width: 350px;
-    padding: 10px 60px 10px 10px;
-    margin-left: 50px;
+    padding: 5px 10px;
     font-size: 1em;
+    outline: none; border: none;
+    background: transparent;
+    border-bottom: 1px solid #b9b4b4;
 
 }
 
 .add-task {
-    width: 50px; height: 40px;
-    position: relative; left: -50px;
-    background: #49c539;
-    font-weight: bolder;
+    width: 40px; height: 40px;
+    position: relative;
+    background: url(./icons/add-icon.png);
+    background-repeat: no-repeat;
+    background-position: center center;
     outline: none; border: none;
-    cursor: pointer;
+    cursor: pointer; border-radius: 25px;
+    margin-left: 5px;
+    transition: 0.2s ease all;
+}
+
+.add-task:active {
+    transform: scale(.93);
 }
 
 #task-field {
@@ -62,28 +72,43 @@ ul#task-list {
 }
 
 ul#task-list li {
-    padding: 20px;
-    width: 550px;
+    width: 550px; padding: 20px;
     margin: 10px 0;
-    border-top: 1px solid rgba(128, 128, 128, .5);
-    border-bottom: 1px solid rgba(128, 128, 128, .5);
     word-break: break-all;
+    background-color: #fff;
+    box-shadow: 0 2px 14px rgba(0,0,0,.1);
+    transition: .2s ease all;
+    border-radius: 20px;
 }
 
-.del-btn {
+ul#task-list li:hover {
+    background-color: #e4dfdf;
+}
+
+button.del-btn {
     position: relative;
     padding: 10px;
-    top: -3px; left: 10px;
+    top: -4px; left: 10px;
     background: transparent;
     outline: none; border: none;
     cursor: pointer;
     background-image: url(./icons/trash-icon.svg);
     background-repeat: no-repeat;
     background-position: center;
+    transition: .2s ease all;
+}
+
+.del-btn:active {
+    transform: scale(1.2);
 }
 
 @media (max-width: 430px)  {
+    .to-do-input {
+        width: 300px;
+    }
+
     ul#task-list {
+        
         width: 350px;
     }
 
